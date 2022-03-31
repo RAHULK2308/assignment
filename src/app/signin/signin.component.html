@@ -1,0 +1,19 @@
+<form class="col-sm-6" style="margin: 40px; border: 1px solid black;" [formGroup]="signForm" (ngSubmit)="submit()">
+    <h4 style="text-align: center;">Signin</h4>
+ 
+<div class="mb-3 row" style="margin: 10px;">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-5">
+      <input type="text"  class="form-control-plaintext" id="staticEmail" placeholder="Enter your email" formControlName="email" name="email" [(ngModel)]="email">
+    </div>
+  </div>
+  <div class="mb-3 row" style="margin: 10px;">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-4">
+      <input type="password" class="form-control" id="inputPassword" formControlName="password" name="password" [(ngModel)]="password">
+    </div>
+  </div>
+  <div class="col-sm-2" style="margin: 20px; text-align: center;">
+    <input type="submit" value="signup" style="background-color: blue; color: white;" [disabled]="signForm.invalid">
+  </div>
+</form>
